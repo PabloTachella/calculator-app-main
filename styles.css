@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
 :root {
+	--theme-font: 'Spartan', sans-serif;
+
 	/* Theme 1 */
 	--b-main: hsl(222, 26%, 31%);
 	--b-keypad: hsl(223, 31%, 20%);
@@ -11,6 +15,10 @@
 	--key-shadow: hsl(28, 16%, 65%);
 	--text-blue: hsl(221, 14%, 31%);
 	--white: hsl(0, 0, 100%);
+}
+
+body {
+	font-family: var(--theme-font);
 }
 
 .attribution { font-size: 11px; text-align: center; }
