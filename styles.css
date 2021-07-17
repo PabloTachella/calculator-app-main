@@ -26,7 +26,10 @@ body {
 }
 
 .b-main {
+	display: flex;
+	flex-direction: column;
 	height: 90vh;
+	justify-content: center;
 	margin: 0 auto;
 	width: 450px;
 }
@@ -36,7 +39,9 @@ body {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	height: 80px;
+}
+.b-head__title {
+	margin: 0;
 }
 .b-head__theme {
 	align-items: center;
@@ -78,6 +83,21 @@ body {
 }
 input.b-switch_theme_blue:checked {
 	background-color: var(--b-key-red);
+}
+
+/* Screen */
+.b-screen {
+	align-items: center;
+	background-color: var(--b-screen);
+	border-radius: 10px;
+	display: flex;
+	height: 60px;
+	justify-content: flex-end;
+	margin: 25px 0;
+	padding: 25px;
+}
+.b-screen__result {
+	font-size: 40px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
