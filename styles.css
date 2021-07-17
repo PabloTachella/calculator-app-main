@@ -2,25 +2,57 @@
 
 :root {
 	--theme-font: 'Spartan', sans-serif;
-
+}
+.b-body_theme_blue {
 	/* Theme 1 */
 	--b-main: hsl(222, 26%, 31%);
 	--b-keypad: hsl(223, 31%, 20%);
 	--b-screen: hsl(224, 36%, 15%);
-	--b-key-blue: hsl(225, 21%, 49%);
-	--key-shadow-blue: hsl(224, 28%, 35%);
-	--b-key-red: hsl(6, 63%, 50%);
-	--key-shadow-red: hsl(6, 70%, 34%);
+	--b-key-primary: hsl(225, 21%, 49%);
+	--key-shadow-primary: hsl(224, 28%, 35%);
+	--b-key-tertiary: hsl(6, 63%, 50%);
+	--key-shadow-tertiary: hsl(6, 70%, 34%);
 	--b-key: hsl(30, 25%, 89%);
 	--key-shadow: hsl(28, 16%, 65%);
-	--text-blue: hsl(221, 14%, 31%);
+	--text-primary: hsl(221, 14%, 31%);
+	--text-color: hsl(30, 25%, 89%);
+	--white: white; /* hsl(0, 0, 100%) */
+}
+.b-body_theme_white {
+	/* Theme 2 */
+	--b-main: hsl(0, 0%, 90%);
+	--b-keypad:  hsl(0, 5%, 81%);
+	--b-screen: hsl(0, 0%, 93%);
+	--b-key-primary: hsl(185, 42%, 37%);
+	--key-shadow-primary: hsl(185, 58%, 25%);
+	--b-key-tertiary: hsl(25, 98%, 40%);
+	--key-shadow-tertiary: hsl(25, 99%, 27%);
+	--b-key: hsl(45, 7%, 89%);
+	--key-shadow: hsl(35, 11%, 61%);
+	--text-primary: hsl(60, 10%, 19%);
+	--text-color: hsl(60, 10%, 19%);
+	--white: white; /* hsl(0, 0, 100%) */
+}
+.b-body_theme_purple {
+	/* Theme 3 */
+	--b-main: hsl(268, 75%, 9%);
+	--b-keypad:  hsl(268, 71%, 12%);
+	--b-screen: hsl(268, 71%, 12%);
+	--b-key-primary: hsl(281, 89%, 26%);
+	--key-shadow-primary: hsl(285, 91%, 52%);
+	--b-key-tertiary: hsl(176, 100%, 44%);
+	--key-shadow-tertiary: hsl(177, 92%, 70%);
+	--b-key: hsl(268, 47%, 21%);
+	--key-shadow: hsl(290, 70%, 36%);
+	--text-primary: hsl(52, 100%, 62%);
+	--text-color: hsl(52, 100%, 62%);
 	--white: white; /* hsl(0, 0, 100%) */
 }
 
 body {
 	background-color: var(--b-main);
 	box-sizing: border-box;
-	color: var(--white);
+	color: var(--text-color);
 	font-family: var(--theme-font);
 	margin: 0;
 }
@@ -34,7 +66,7 @@ body {
 	width: 450px;
 }
 
-/* calculator head */
+/* Calculator head */
 .b-head {
 	align-items: flex-end;
 	display: flex;
@@ -46,7 +78,7 @@ body {
 }
 .b-head__theme {
 	align-items: center;
-	color: var(--b-key);
+	color: var(--text-color);
 	display: grid;
 	font-size: 10px;
 	grid-template: repeat(2, 20px) / repeat(2, 60px);
@@ -83,7 +115,13 @@ body {
 	width: 13px;
 }
 input.b-switch_theme_blue:checked {
-	background-color: var(--b-key-red);
+	background-color: var(--b-key-tertiary);
+}
+input.b-switch_theme_white:checked {
+	background-color: var(--b-key-tertiary);
+}
+input.b-switch_theme_purple:checked {
+	background-color: var(--b-key-tertiary);
 }
 
 /* Screen */
@@ -128,28 +166,28 @@ input.b-switch_theme_blue:checked {
 	grid-column: 3 / 5;
 	grid-row: 5 / 6;
 }
-.b-keypad__key_keys_principal {
+.b-keypad__key_keys_primary {
 	font-size: 26px;
 	border-bottom: 4px solid var(--key-shadow);
 	background-color: var(--b-key);
-	color: var(--key-shadow-blue);
+	color: var(--text-primary);
 }
 .b-keypad__key_keys_secondary {
 	font-size: 17px;
-	border-bottom: 4px solid var(--key-shadow-blue);
-	background-color: var(--b-key-blue);
-	color: var(--b-key);
+	border-bottom: 4px solid var(--key-shadow-primary);
+	background-color: var(--b-key-primary);
+	color: var(--white);
 }
-.b-keypad__key_keys_third {
+.b-keypad__key_keys_tertiary {
 	font-size: 17px;
-	border-bottom: 4px solid var(--key-shadow-red);
-	background-color: var(--b-key-red);
+	border-bottom: 4px solid var(--key-shadow-tertiary);
+	background-color: var(--b-key-tertiary);
 	color: var(--b-key);
 }
 
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: var(--text-color); }
 
 @media only screen and (max-width: 600px){
 	.b-main {
