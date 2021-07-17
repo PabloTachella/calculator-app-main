@@ -14,11 +14,70 @@
 	--b-key: hsl(30, 25%, 89%);
 	--key-shadow: hsl(28, 16%, 65%);
 	--text-blue: hsl(221, 14%, 31%);
-	--white: hsl(0, 0, 100%);
+	--white: white; /* hsl(0, 0, 100%) */
 }
 
 body {
+	background-color: var(--b-main);
+	box-sizing: border-box;
+	color: var(--white);
 	font-family: var(--theme-font);
+	margin: 0;
+}
+
+.b-main {
+	height: 90vh;
+	margin: 0 auto;
+	width: 450px;
+}
+
+/* calculator head */
+.b-head {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+}
+.b-head__theme {
+	align-items: center;
+	color: var(--b-key);
+	display: grid;
+	font-size: 0.6rem;
+	grid-template: repeat(2, 21px) / repeat(2, 58px);
+	grid-template-areas: 
+		". options"
+		"text switch";
+}
+.b-head__text {
+	grid-area: text;
+	letter-spacing: 1px;
+}
+.b-head__options {
+	display: flex;
+	grid-area: options;
+	justify-content: space-around;
+	padding: 0 4px;
+}
+.b-switch {
+	background-color: var(--b-keypad);
+	border-radius: 50ex;
+	box-sizing: border-box;
+	display: flex;
+	grid-area: switch;
+	height: 21px;
+	justify-content: space-between;
+	padding: 4px;
+}
+.b-switch__radio {
+	appearance: none;
+	border-radius: 50%;
+	height: 13px;
+	margin: 0;
+	outline: none;
+	width: 13px;
+}
+input.b-switch_theme_blue:checked {
+	background-color: var(--b-key-red);
 }
 
 .attribution { font-size: 11px; text-align: center; }
