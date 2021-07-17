@@ -28,7 +28,7 @@ body {
 .b-main {
 	display: flex;
 	flex-direction: column;
-	height: 90vh;
+	height: 100vh;
 	justify-content: center;
 	margin: 0 auto;
 	width: 450px;
@@ -36,19 +36,20 @@ body {
 
 /* calculator head */
 .b-head {
-	align-items: center;
+	align-items: flex-end;
 	display: flex;
 	justify-content: space-between;
 }
 .b-head__title {
 	margin: 0;
+	font-size: 32px;
 }
 .b-head__theme {
 	align-items: center;
 	color: var(--b-key);
 	display: grid;
-	font-size: 0.6rem;
-	grid-template: repeat(2, 21px) / repeat(2, 58px);
+	font-size: 12px;
+	grid-template: repeat(2, 25px) / repeat(2, 75px);
 	grid-template-areas: 
 		". options"
 		"text switch";
@@ -69,17 +70,17 @@ body {
 	box-sizing: border-box;
 	display: flex;
 	grid-area: switch;
-	height: 21px;
+	height: 26px;
 	justify-content: space-between;
-	padding: 4px;
+	padding: 5px;
 }
 .b-switch__radio {
 	appearance: none;
 	border-radius: 50%;
-	height: 13px;
+	height: 16px;
 	margin: 0;
 	outline: none;
-	width: 13px;
+	width: 16px;
 }
 input.b-switch_theme_blue:checked {
 	background-color: var(--b-key-red);
@@ -93,12 +94,75 @@ input.b-switch_theme_blue:checked {
 	display: flex;
 	height: 60px;
 	justify-content: flex-end;
-	margin: 25px 0;
+	margin: 25px 0 20px;
 	padding: 25px;
 }
 .b-screen__result {
 	font-size: 40px;
 }
 
+/* Keypad */
+.b-keypad {
+	background-color: var(--b-keypad);
+	border-radius: 9px;
+	display: grid;
+	grid-auto-columns: auto;
+	grid-gap: 20px;
+	grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+	height: 350px;
+	padding: 25px;
+}
+.b-keypad__key {
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-radius: 10px;
+	font-family: var(--theme-font);
+	padding-top: 8px;
+}
+.b-keypad__key_width_double_left {
+	grid-column: 1 / 3;
+	grid-row: 5 / 6;
+}
+.b-keypad__key_width_double_right {
+	grid-column: 3 / 5;
+	grid-row: 5 / 6;
+}
+.b-keypad__key_keys_principal {
+	font-size: 26px;
+	border-bottom: 4px solid var(--key-shadow);
+	background-color: var(--b-key);
+	color: var(--key-shadow-blue);
+}
+.b-keypad__key_keys_secondary {
+	font-size: 17px;
+	border-bottom: 4px solid var(--key-shadow-blue);
+	background-color: var(--b-key-blue);
+	color: var(--b-key);
+}
+.b-keypad__key_keys_third {
+	font-size: 17px;
+	border-bottom: 4px solid var(--key-shadow-red);
+	background-color: var(--b-key-red);
+	color: var(--b-key);
+}
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 600px){
+	.b-main {
+		width: 325px;
+
+	}
+	.b-head {
+		align-items: center;
+	}
+
+	/* Screen */
+	.b-screen {
+		height: 40px;
+		margin: 30px 0 25px;
+	}
+}
