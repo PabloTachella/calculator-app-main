@@ -114,15 +114,16 @@ body {
 	outline: none;
 	width: 13px;
 }
-input.b-switch_theme_blue:checked {
+.b-switch_theme_blue:checked {
 	background-color: var(--b-key-tertiary);
 }
-input.b-switch_theme_white:checked {
+.b-switch_theme_white:checked {
 	background-color: var(--b-key-tertiary);
 }
-input.b-switch_theme_purple:checked {
+.b-switch_theme_purple:checked {
 	background-color: var(--b-key-tertiary);
 }
+
 
 /* Screen */
 .b-screen {

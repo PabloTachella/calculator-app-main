@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body class="b-body_theme_blue">
+<body>
   <main class="b-main">
     <section class="b-head">
       <h1 class="b-head__title">calc</h1>
@@ -19,9 +19,24 @@
           <h4 class="b-head__option">3</h4>
         </div>
         <div class="b-switch">
-          <input class="b-switch_theme_blue b-switch__radio" name="switch" type="radio" checked/>
-          <input class="b-switch_theme_white b-switch__radio" name="switch" type="radio"/>
-          <input class="b-switch_theme_purple b-switch__radio" name="switch" type="radio"/>
+          <input 
+            class="b-switch_theme_blue b-switch__radio" 
+            id="blue" 
+            name="switch"
+            onclick="selectTheme()" 
+            type="radio"/>
+          <input 
+            class="b-switch_theme_white b-switch__radio" 
+            id="white" 
+            name="switch"
+            onclick="selectTheme()"  
+            type="radio"/>
+          <input 
+            class="b-switch_theme_purple b-switch__radio" 
+            id="purple" 
+            name="switch"
+            onclick="selectTheme()" 
+            type="radio"/>
         </div>
       </div>
     </section>
@@ -56,5 +71,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Pablo Tachella</a>.
   </div>
+
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
