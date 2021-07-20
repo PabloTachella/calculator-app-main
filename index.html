@@ -42,28 +42,100 @@
     </section>
 
     <section class="b-screen">
-      <p class="b-screen__result">399,981</p>
+      <p id="screen" class="b-screen__result">0</p>
     </section>
 
     <section class="b-keypad">
-      <button class="b-keypad__key b-keypad__key_keys_primary">7</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">8</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">9</button>
-      <button class="b-keypad__key b-keypad__key_keys_secondary">DEL</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">4</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">5</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">6</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">+</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">1</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">2</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">3</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">-</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">.</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">0</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">/</button>
-      <button class="b-keypad__key b-keypad__key_keys_primary">x</button>
-      <button class="b-keypad__key b-keypad__key_keys_secondary b-keypad__key_width_double_left">RESET</button>
-      <button class="b-keypad__key b-keypad__key_keys_tertiary b-keypad__key_width_double_right">=</button>
+      <button 
+        id="7" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">7
+      </button>
+      <button 
+        id="8" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">8
+      </button>
+      <button 
+        id="9" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">9
+      </button>
+      <button 
+        id="del" 
+        onclick="inputDel()"
+        class="b-keypad__key b-keypad__key_keys_secondary">DEL
+      </button>
+      <button 
+        id="4" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">4
+      </button>
+      <button 
+        id="5" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">5
+      </button>
+      <button 
+        id="6" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">6
+      </button>
+      <button 
+        id="sum" 
+        onclick="inputOperator(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">+
+      </button>
+      <button 
+        id="1" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">1
+      </button>
+      <button 
+        id="2" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">2
+      </button>
+      <button 
+        id="3" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">3
+      </button>
+      <button 
+        id="subtract" 
+        onclick="inputOperator(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">-
+      </button>
+      <button 
+        id="dot" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">.
+      </button>
+      <button 
+        id="0" 
+        onclick="inputValue(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">0
+      </button>
+      <button 
+        id="divide" 
+        onclick="inputOperator(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">/
+      </button>
+      <button 
+        id="multiply" 
+        onclick="inputOperator(this.innerText)"
+        class="b-keypad__key b-keypad__key_keys_primary">x
+      </button>
+      <button 
+        id="reset" 
+        onclick="inputReset()"
+        class="b-keypad__key b-keypad__key_keys_secondary b-keypad__key_width_double_left">RESET
+      </button>
+      <button 
+        id="equal" 
+        onclick="inputEqual()"
+        class="b-keypad__key b-keypad__key_keys_tertiary b-keypad__key_width_double_right">=
+      </button>
     </section>
   </main>
   
