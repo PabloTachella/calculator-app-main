@@ -160,27 +160,27 @@ body {
 	font-family: var(--theme-font);
 	padding-top: 8px;
 }
-.b-keypad__key_width_double_left {
+.key_width_double_left {
 	grid-column: 1 / 3;
 	grid-row: 5 / 6;
 }
-.b-keypad__key_width_double_right {
+.key_width_double_right {
 	grid-column: 3 / 5;
 	grid-row: 5 / 6;
 }
-.b-keypad__key_keys_primary {
+.key_keys_primary {
 	font-size: 26px;
 	border-bottom: 4px solid var(--key-shadow);
 	background-color: var(--b-key);
 	color: var(--text-primary);
 }
-.b-keypad__key_keys_secondary {
+.key_keys_secondary {
 	font-size: 17px;
 	border-bottom: 4px solid var(--key-shadow-primary);
 	background-color: var(--b-key-primary);
 	color: var(--white);
 }
-.b-keypad__key_keys_tertiary {
+.key_keys_tertiary {
 	font-size: 17px;
 	border-bottom: 4px solid var(--key-shadow-tertiary);
 	background-color: var(--b-key-tertiary);
