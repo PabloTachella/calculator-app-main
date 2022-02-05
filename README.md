@@ -1,32 +1,32 @@
 # Calculator app solution - Frontend Mentor
 
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29).
+Esta es una solución al [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29).
 
-## Table of contents
+## Tabla de contenido
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
+- [Descripción general](#descripción-general)
+  - [Challenge](#challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Mi proceso](#mi-proceso)
+  - [Construido con](#construido-con)
+  - [Que aprendí](#que-aprendí)
+  - [Desarrollo continuo](#desarrollo-continuo)
+  - [Recursos útiles](#recursos-útiles)
+- [Autor](#autor)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## Overview
+## Descripción general
 
-### The challenge
+### Chalenge
 
-Users should be able to:
+Los usuarios deben ser capaces de:
 
-- See the size of the elements adjust based on their device's screen size
-- Perform mathmatical operations like addition, subtraction, multiplication, and division
-- Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
+- Vea cómo se ajusta el tamaño de los elementos según el tamaño de la pantalla de su dispositivo
+- Realizar operaciones matemáticas como suma, resta, multiplicación y división.
+- Ajuste el tema de color según su preferencia
+- **Bonificación**: verifique su preferencia de tema inicial usando `prefers-color-scheme` y guarde cualquier cambio adicional en el navegador
 
 ### Screenshot
 
@@ -34,49 +34,49 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github.com/PabloTachella/calculator-app-main](https://github.com/PabloTachella/calculator-app-main)
-- Live Site URL: [pablotachella.github.io/calculator-app-main/](https://pablotachella.github.io/calculator-app-main/)
+- Solución URL: [github.com/PabloTachella/calculator-app-main](https://github.com/PabloTachella/calculator-app-main)
+- Sitio web URL: [pablotachella.github.io/calculator-app-main/](https://pablotachella.github.io/calculator-app-main/)
 
-## My process
+## Mi proceso
 
-### Built with
+### Construido con
 
-- Semantic HTML5 markup
-- Methodology BEM
+- HTML5
+- Metodología BEM
 - Flexbox
 - CSS Grid
 - CSS media queries
 - Vanilla JS
 
-**Note: The JS code does not cover the entire flow in a calculator, but it does solve recurring situations**
+**Nota: toda la lógica, algoritmos y decisiones en el proyecto son de mi autoría, no contiene nada de código copiado**
 
-### What I learned
+### Que aprendí
 
-In this challenge I implemented the BEM methodology (b-block__element_mod), with which you completely forget about specificity problems.
-b- prefix stands for “block” and is the default in many BEM implementations.
+En este reto implementé la metodología BEM (b-block__element_mod), con la que te olvidas por completo de los problemas de especificidad.
+El prefijo b significa "bloque" y es el predeterminado en muchas implementaciones de BEM.
 ```html
 <h1 class="b-head__title">calc</h1>
 
 <body class="b-body_theme_blue"> 
 ```
-Even when manipulating the DOM with JS, BEM can provide us with a unique class name or not (depending on the use case) with which to access the HTML elements without the need to assign an ID
+Incluso manipulando el DOM con JS, BEM puede proporcionarnos un nombre de clase único o no (según el caso de uso) con el que acceder a los elementos HTML sin necesidad de asignar un ID.
 
 ```js
 // alternative to get an element from the DOM
 // the BEM methodology allows to know which element is being brought
-const screenContainer = document.getElementsByClassName('b-screen')[0]
+const screenContainer = document.querySelector('.b-screen')
 ```
 
-### Continued development
+### Desarrollo continuo
 
-Completing this challenge helped me put into practice various knowledge and motivated me to continue doing practical exercises to face new challenges and have a better portfolio.
+Completar este reto me ayudó a poner en práctica varios conocimientos y me motivó a seguir realizando ejercicios prácticos para afrontar nuevos retos y tener un mejor portfolio.
 
-### Useful resources
+### Recursos útiles
 
-- [www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/](https://www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/) - this helped me for reasons already mentioned. I really liked this methodology and will use it going forward.
-- [marabelia.com/css-font-size-responsive/](https://marabelia.com/css-font-size-responsive/) - in addressing EM's scalable unit of measure, they helped me find an alternative to manipulate the font-size from JS which affects any screen size.
+- [www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/](https://www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/) - Este recurso contiene información sobre como implementar la metodología BEM
+- [marabelia.com/css-font-size-responsive/](https://marabelia.com/css-font-size-responsive/) - Abordar la unidad de medida escalable 'EM', Me ayudó a encontrar una alternativa para manipular el tamaño de fuente desde JS que afecta a cualquier tamaño de pantalla.
 
-## Author
+## Autor
 
 - Website - [Pablo Tachella](https://pablotachella.github.io/)
 - Platzi Profile - [@PabloTachella](https://platzi.com/p/tachella/)
